@@ -17,7 +17,6 @@
 * [Installation](#-installation)
 * [React & Next.js Concepts Covered](#-react--nextjs-concepts-covered)
 * [How It Works](#-how-it-works)
-* [Project Structure](#-project-structure)
 * [Screenshot](#-screenshot)
 * [Demo](#-demo)
 * [Author](#-author)
@@ -382,26 +381,6 @@ UserData
 ```
 
 ---
-
-## 📂 Project Structure
-
-```text
-User-Management-System/
-│
-├── app/
-│   ├── page.tsx
-│   ├── layout.tsx
-│   └── globals.css
-│
-├── public/
-│   └── ...
-│
-├── package.json
-├── tsconfig.json
-├── next.config.ts
-├── postcss.config.mjs
-└── README.md
-```
 
 > The exact folder structure may vary depending on the Next.js project setup.
 
