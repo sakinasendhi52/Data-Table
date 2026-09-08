@@ -382,10 +382,6 @@ UserData
 
 ---
 
-> The exact folder structure may vary depending on the Next.js project setup.
-
----
-
 ## 📸 Screenshot
 
 ### User Registration Form
