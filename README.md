@@ -1,365 +1,339 @@
+<div align="center">
+
 # Project : User Management System
 
-A simple and interactive **User Management System** built using **Next.js, TypeScript, Tailwind CSS, React, and Heroicons**. This project allows users to add, view, search, sort, edit, and delete user records.
+**A responsive and interactive User Management application built with Next.js, TypeScript, and Tailwind CSS. The application allows users to add, edit, delete, search, sort, and paginate user records while storing all data locally using the browser's Local Storage.**
 
-User data is stored in the browser using **Local Storage**, so the records remain available even after refreshing the page.
+</div>
+
+---
+
+## 📑 Table of Contents
+
+* [Project Description](#-project-description)
+* [How This Project is Made](#-how-this-project-is-made)
+* [Features](#-features)
+* [Technologies Used](#-technologies-used)
+* [Installation](#-installation)
+* [React & Next.js Concepts Covered](#-react--nextjs-concepts-covered)
+* [How It Works](#-how-it-works)
+* [Project Structure](#-project-structure)
+* [Screenshot](#-screenshot)
+* [Demo](#-demo)
+* [Author](#-author)
 
 ---
 
 ## 📌 Project Description
 
-The **User Management System** is a frontend-based application developed using **Next.js and React**.
+The **User Management System** is a single-page user registration and management application built using **Next.js, TypeScript, and Tailwind CSS**.
 
-It provides a complete user registration form where users can enter:
+The application provides a complete form for entering user information such as username, personal details, email, password, gender, hobbies, country, address, profile photo, and cover photo.
 
-- Profile information
-- Personal information
-- Contact information
-- Address information
-- Gender
-- Hobbies
-- Profile photo
-- Cover photo
+Submitted user data is stored in the browser's **Local Storage**, allowing the records to remain available even after refreshing the page.
 
-The application stores the submitted user data in **Local Storage** and displays the records in a responsive table.
+The application also provides a user data table with **search, sorting, editing, deleting, and pagination** functionality, making it easy to manage multiple user records from a single page.
 
-Users can:
-
-- Add new users
-- View user records
-- Search users
-- Sort user records
-- Edit existing users
-- Delete users
-- Upload profile and cover photos
-- Navigate through users using pagination
-
-This project is designed to strengthen concepts such as **React Hooks, TypeScript, form handling, validation, Local Storage, image processing, and Tailwind CSS**.
+This project was created to practice React and Next.js concepts such as **useState, useEffect, controlled forms, event handling, array methods, TypeScript interfaces, Local Storage, validation, image handling, sorting, filtering, and pagination**.
 
 ---
 
 ## 🚀 How This Project is Made
 
-This project is built using **Next.js, React, TypeScript, Tailwind CSS, and Heroicons**.
+This project is built using **Next.js**, **TypeScript**, **Tailwind CSS**, and **Heroicons** to create a responsive and interactive **User Management System**.
 
-### 🧱 Next.js & React
+### 🧱 Form Structure
 
-- Next.js is used as the main framework.
-- React is used to create interactive UI components.
-- `"use client"` is used because the application requires client-side features such as:
-  - `useState()`
-  - `useEffect()`
-  - `localStorage`
-  - File upload
-  - Browser APIs
+The application contains a detailed user registration form divided into different sections:
 
-### 🎨 Tailwind CSS
+* **Profile**
 
-Tailwind CSS is used for styling the application.
+  * Username
+  * About
+  * Profile Photo
+  * Cover Photo
 
-It provides:
+* **Personal Information**
 
-- Responsive layouts
-- Form styling
-- Buttons
-- Tables
-- Spacing
-- Borders
-- Colors
-- Hover effects
-- Responsive design
+  * First Name
+  * Last Name
+  * Email
+  * Password
+  * Gender
+  * Hobbies
+  * Country
+  * Street Address
+  * City
+  * State
+  * PIN / Postal Code
 
-### 📘 TypeScript
+The form uses React state variables to control every input field.
 
-TypeScript is used to define the structure of user data using an interface.
+### 🎨 Tailwind CSS Styling
 
-The `UserData` interface contains:
+* Tailwind CSS is used for the complete UI design.
+* Responsive grid layouts are created using Tailwind's grid utilities.
+* Utility classes are used for spacing, borders, typography, colors, buttons, and responsive layouts.
+* The user form uses a clean white card layout with a slate-colored background.
+* Amber is used as the primary action color.
+* Responsive classes such as `sm:grid-cols-6`, `max-w-3xl`, and `max-w-6xl` provide responsive behavior.
+* Hover and disabled states are implemented using Tailwind utility classes.
 
-- ID
-- Username
-- About
-- First Name
-- Last Name
-- Email
-- Password
-- Gender
-- Hobby
-- Country
-- Street Address
-- City
-- State
-- PIN Code
-- Profile Photo
-- Cover Photo
+### ⚙️ React & Next.js Functionality
 
-### 💾 Local Storage
-
-Browser `localStorage` is used to store user records.
-
-The data is stored using the key:
-
-```text
-Users
-```
-
-When the page loads, the application retrieves the saved users from Local Storage using `useEffect()`.
+* `useState()` manages form fields, users, errors, search, sorting, pagination, and edit state.
+* `useEffect()` loads previously stored users from Local Storage when the component mounts.
+* Controlled inputs are used throughout the form.
+* `localStorage` is used to save and retrieve user records.
+* Array methods such as `filter()`, `map()`, `sort()`, and `slice()` are used for user management.
+* `Date.now()` generates a unique numeric ID when a new user is added.
+* TypeScript interfaces provide structure and type safety for user data.
+* `window.confirm()` is used before deleting a user.
+* `alert()` provides feedback after adding, updating, or deleting users.
 
 ---
 
 ## ✨ Features
 
-- User Registration Form
-- Add User
-- View Users
-- Edit User
-- Delete User
-- Search Users
-- Sort Users
-- Pagination
-- Profile Photo Upload
-- Cover Photo Upload
-- Image Compression
-- Form Validation
-- Multiple Hobby Selection
-- Gender Selection
-- Country Selection
-- Local Storage Data Management
-- Responsive UI
-- Tailwind CSS Styling
-- Heroicons
-- Automatic Page Reset After Search and Sorting
+* User Registration Form
+* Controlled Form Inputs
+* Form Validation
+* Profile Photo Upload
+* Cover Photo Upload
+* Image Compression
+* Local Storage Data Management
+* Add User
+* Edit User
+* Delete User
+* Search Users
+* Sort Users
+* Pagination
+* Previous / Next Pagination Controls
+* Dynamic User Count
+* Responsive User Data Table
+* Profile Image Preview
+* Error Messages
+* Reset Form
+* TypeScript Type Safety
+* Responsive Tailwind CSS Design
+* Heroicons for Edit, Delete, Upload, and Profile Icons
 
 ---
 
-## 🔎 Search Functionality
+## 🛠️ Technologies Used
 
-The application provides a **Search Users** field.
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
+* JavaScript (ES6+)
+* Heroicons
+* HTML5
+* Local Storage API
 
-Users can be searched by:
+---
 
-- Username
-- First Name
-- Last Name
-- Email
-- Gender
-- Country
-- City
-- State
+## 📥 Installation
 
-The search is **case-insensitive**.
+### Create a Next.js Project
 
-For example:
+Create a new Next.js application using:
 
-```text
-Search: sakina
+```bash
+npx create-next-app@latest user-management
 ```
 
-The application can find users whose username, first name, last name, email, gender, country, city, or state contains the searched text.
+Move into the project folder:
 
----
-
-## 🔃 Sorting Functionality
-
-The application provides sorting buttons for:
-
-- Username
-- Name
-- ID
-
-Users can sort the data in:
-
-- Ascending order ↑
-- Descending order ↓
-
-When the same sorting button is clicked again, the sorting order changes automatically.
-
----
-
-## 📄 Pagination
-
-Pagination is implemented to make the users table easier to manage.
-
-The application displays:
-
-```text
-5 Users Per Page
+```bash
+cd user-management
 ```
 
-Users can navigate between pages using:
+### Install Heroicons
 
-- Previous
-- Page Numbers
-- Next
+The project uses Heroicons for profile, upload, edit, and delete icons.
 
-The application also displays the current record range.
-
-Example:
-
-```text
-Showing 1 to 5 of 10 Users
+```bash
+npm install @heroicons/react
 ```
+
+### Start the Development Server
+
+Run the following command:
+
+```bash
+npm run dev
+```
+
+The application will run on the local development server.
 
 ---
 
-## 📝 Form Validation
+## 📚 React & Next.js Concepts Covered
 
-The registration form includes validation for different fields.
+* Functional Components
+* Client Components
+* `useState()`
+* `useEffect()`
+* Controlled Components
+* Event Handling
+* Form Handling
+* Form Validation
+* TypeScript Interfaces
+* TypeScript Generics
+* Array Methods
 
-### Username
-
-- Required
-- Minimum 3 characters
-- Maximum 20 characters
-- Allows letters, numbers, and underscore
-
-### About
-
-- Required
-- Minimum 30 characters
-- Maximum 200 characters
-
-### First Name
-
-- Required
-- Minimum 2 characters
-- Allows characters and spaces
-
-### Last Name
-
-- Required
-- Minimum 2 characters
-- Allows characters and spaces
-
-### Email
-
-- Required
-- Must follow a valid email format
-
-### Password
-
-The password must:
-
-- Be at least 8 characters
-- Not exceed 16 characters
-- Contain an uppercase letter
-- Contain a lowercase letter
-- Contain a number
-- Contain a special character
-
-### Gender
-
-- Required
-- Male or Female
-
-### Hobby
-
-At least one hobby must be selected.
-
-Available hobbies include:
-
-- Reading
-- Writing
-- Surfing
-- Travelling
-- Music
-
-### Country
-
-A country must be selected.
-
-Available countries include:
-
-- India
-- United States
-- Canada
-- China
-- Russia
-- Mexico
-
-### Address
-
-The application validates:
-
-- Street Address
-- City
-- State
-- PIN Code
-
-The PIN code must contain exactly **6 digits**.
-
-### Photos
-
-Both profile photo and cover photo are required.
+  * `map()`
+  * `filter()`
+  * `sort()`
+  * `slice()`
+  * `join()`
+* Spread Operator
+* Template Literals
+* Conditional Rendering
+* Local Storage
+* File Handling
+* `FileReader`
+* Canvas API
+* Image Compression
+* Search / Filtering
+* Sorting
+* Pagination
+* Responsive Design
+* Tailwind CSS Utility Classes
 
 ---
 
-## 🖼️ Image Upload & Compression
+## 🔄 How It Works
 
-The application allows users to upload:
+### 👤 Add User
 
-- Profile Photo
-- Cover Photo
+The user fills out the registration form with their personal, contact, address, hobby, and profile information.
 
-Before storing the images, the application compresses them using the **Canvas API**.
+After successful validation:
 
-Image compression helps reduce the size of images before saving them in Local Storage.
+1. A unique ID is generated using `Date.now()`.
+2. A new user object is created.
+3. The new user is added to the existing users array.
+4. The updated array is saved to Local Storage.
+5. The users table is updated.
+6. The form is reset.
+7. A success message is displayed.
 
-### Profile Photo
+### ✏️ Edit User
 
-Maximum width:
+The **Edit** button allows an existing user's information to be loaded back into the form.
 
-```text
-500px
-```
+When editing:
 
-### Cover Photo
-
-Maximum width:
-
-```text
-800px
-```
-
-The images are converted to JPEG format before being stored.
-
----
-
-## ✏️ Edit User
-
-The **Edit** button allows an existing user record to be modified.
-
-When the Edit button is clicked:
-
-1. User data is loaded into the form.
-2. The form fields are populated with existing values.
+1. The selected user's ID is stored in `editId`.
+2. Existing user information is loaded into the form.
 3. The user can modify the information.
-4. The button changes from **Add User** to **Update User**.
-5. Updated information is saved to Local Storage.
+4. After submission, the matching user is updated.
+5. Updated data is saved to Local Storage.
+6. The form is reset.
 
----
+### 🗑️ Delete User
 
-## 🗑️ Delete User
+The **Delete** button removes a user from the table.
 
-The **Delete** button allows users to remove a record.
+Before deleting, a confirmation dialog is displayed.
 
-Before deleting a user, the application displays a confirmation message:
+If the user confirms:
 
-```text
-Are You sure you want to delete this Record?
-```
-
-If the user confirms the deletion:
-
-1. The selected record is removed.
-2. The updated user list is saved to Local Storage.
+1. The selected record is removed using `filter()`.
+2. The updated users array is saved to Local Storage.
 3. The table is updated.
 4. A success message is displayed.
 
----
+### 🔍 Search Users
 
-## 💾 Local Storage
+The **Search Users** field allows users to search through the stored user records.
 
-User information is stored in browser Local Storage using:
+The search checks the following fields:
+
+* Username
+* First Name
+* Last Name
+* Email
+* Gender
+* Country
+* City
+* State
+
+The search is case-insensitive and uses JavaScript's `filter()` and `includes()` methods.
+
+For example, searching for:
+
+```text
+sakina
+```
+
+can find a matching username, first name, or last name.
+
+Searching for:
+
+```text
+india
+```
+
+can find users whose country is India.
+
+### ↕️ Sort Users
+
+Users can be sorted using:
+
+* Sort by Username
+* Sort by Name
+* Sort by ID
+
+Clicking the same sorting button again changes the sorting direction between:
+
+```text
+Ascending ↑
+Descending ↓
+```
+
+The sorting uses JavaScript's `sort()` method.
+
+### 📄 Pagination
+
+The table displays **5 users per page**.
+
+The application calculates the total number of pages based on the number of filtered and sorted users.
+
+Pagination includes:
+
+* Previous button
+* Page numbers
+* Next button
+* Current page indication
+* Showing X to Y of Z Users
+
+The users are divided into pages using the `slice()` method.
+
+### 🖼️ Image Upload & Compression
+
+The application allows users to upload:
+
+* Profile Photo
+* Cover Photo
+
+Before storing the image, it is processed using:
+
+* `FileReader`
+* `Image`
+* HTML Canvas
+
+The image is resized when necessary and converted into a compressed JPEG Base64 string.
+
+This helps reduce the amount of data stored in Local Storage.
+
+### 💾 Local Storage
+
+User records are stored using the browser's Local Storage API.
+
+Data is saved using:
 
 ```javascript
 localStorage.setItem(
@@ -368,197 +342,43 @@ localStorage.setItem(
 );
 ```
 
-When the application loads, saved data is retrieved using:
+When the page loads, the saved data is retrieved using:
 
 ```javascript
 localStorage.getItem("Users");
 ```
 
-This allows the user records to remain available even after refreshing the browser.
-
-> **Note:** Local Storage is used for learning and frontend demonstration purposes. Sensitive information such as passwords should not be stored this way in a production application.
-
----
-
-## 🛠️ Technologies Used
-
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
-- Heroicons
-- HTML5
-- CSS3
-- JavaScript
-- Browser Local Storage
-- Canvas API
-
----
-
-## 📚 JavaScript & React Concepts Covered
-
-### React
-
-- Components
-- `useState()`
-- `useEffect()`
-- Event Handling
-- Controlled Forms
-- Conditional Rendering
-- List Rendering
-
-### TypeScript
-
-- Interfaces
-- Type Annotations
-- Union Types
-- Generic State Types
-- `keyof`
-- Type-safe Functions
-
-### JavaScript
-
-- Arrays
-- Objects
-- Functions
-- Arrow Functions
-- Spread Operator
-- Template Literals
-- `map()`
-- `filter()`
-- `sort()`
-- `slice()`
-- `includes()`
-- `localeCompare()`
-- `JSON.stringify()`
-- `JSON.parse()`
-
-### Browser APIs
-
-- Local Storage
-- FileReader
-- Canvas API
-- Image API
-
-### Next.js
-
-- Client Components
-- `"use client"`
-- Next.js App Router
-
-### Tailwind CSS
-
-- Flexbox
-- Grid
-- Responsive Classes
-- Spacing
-- Borders
-- Typography
-- Hover States
-- Responsive Tables
-
----
-
-## ⚙️ How It Works
-
-### 1. Add User
-
-The user fills out the registration form and submits it.
-
-The application:
-
-1. Validates all fields.
-2. Creates a new user object.
-3. Generates a unique ID using:
+The JSON data is then converted back into a JavaScript array using:
 
 ```javascript
-Date.now()
-```
-
-4. Adds the user to the users array.
-5. Saves the updated array to Local Storage.
-6. Displays a success message.
-7. Resets the form.
-
----
-
-### 2. Display Users
-
-User records are retrieved from Local Storage when the page loads.
-
-The users are displayed inside a responsive table containing:
-
-- ID
-- User
-- Email
-- Gender
-- Hobbies
-- Address
-- Actions
-
----
-
-### 3. Search Users
-
-The search input filters users dynamically based on the entered text.
-
-The search checks:
-
-```text
-Username
-First Name
-Last Name
-Email
-Gender
-Country
-City
-State
+JSON.parse(savedUserData);
 ```
 
 ---
 
-### 4. Sort Users
+## 🗂️ User Data Structure
 
-Users can be sorted by:
-
-```text
-Username
-Name
-ID
-```
-
-The sorting can be changed between ascending and descending order.
-
----
-
-### 5. Edit User
-
-Clicking the **Edit** icon loads the selected user's information into the form.
-
-After making changes, clicking **Update User** updates the existing record in Local Storage.
-
----
-
-### 6. Delete User
-
-Clicking the **Delete** icon asks for confirmation.
-
-After confirmation, the selected user is removed from the users array and Local Storage.
-
----
-
-### 7. Pagination
-
-The application divides the user records into pages.
+Each user record contains:
 
 ```text
-Users Per Page = 5
-```
-
-The user can navigate using:
-
-```text
-Prev | 1 | 2 | 3 | Next
+UserData
+│
+├── id
+├── username
+├── about
+├── firstName
+├── lastName
+├── email
+├── password
+├── gender
+├── hobby[]
+├── country
+├── streetAddress
+├── city
+├── state
+├── pinCode
+├── photo
+└── coverPhoto
 ```
 
 ---
@@ -577,103 +397,46 @@ User-Management-System/
 │   └── ...
 │
 ├── package.json
-├── package-lock.json
 ├── tsconfig.json
 ├── next.config.ts
 ├── postcss.config.mjs
-├── eslint.config.mjs
-│
 └── README.md
 ```
 
-> The exact folder structure may vary depending on your Next.js project setup.
+> The exact folder structure may vary depending on the Next.js project setup.
 
 ---
 
-## 🚀 Installation & Setup
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/sakinasendhi52/your-repository-name.git
-```
-
-### 2. Open the Project
-
-```bash
-cd User-Management-System
-```
-
-### 3. Install Dependencies
-
-```bash
-npm install
-```
-
-### 4. Start the Development Server
-
-```bash
-npm run dev
-```
-
-### 5. Open in Browser
-
-```text
-http://localhost:3000
-```
-
----
-
-## 📸 Screenshots
+## 📸 Screenshot
 
 ### User Registration Form
 
-Add a screenshot of your user registration form here.
-
-```html
-<img src="assets/user-form.png" width="800" alt="User Registration Form">
-```
+<img src="assets/form.png" width="800" alt="User Management Form">
 
 ### Users Data Table
 
-Add a screenshot of your users table here.
-
-```html
 <img src="assets/users-table.png" width="800" alt="Users Data Table">
-```
-
-### Search, Sort & Pagination
-
-Add a screenshot showing the search, sorting, and pagination functionality.
-
-```html
-<img src="assets/search-sort-pagination.png" width="800" alt="Search Sort Pagination">
-```
 
 ---
 
-## 🎥 Project Demo
+## 🎬 Demo
 
-**Project Demo:** Add your project demonstration video link here.
-
----
-
-## 🚀 Live Demo
-
-**Live Project:** Add your deployed project link here.
+|                        |                                             |
+| ---------------------- | ------------------------------------------- |
+| 🔗 Live Demo           | **Add your deployed project link here**     |
+| 🎥 Project Walkthrough | **Add your project explanation video here** |
+| 🎥 Project Recording   | **Add your project demo video here**        |
 
 ---
 
-## 👩‍💻 Author
+## 💻 Author
 
-**Sakina Sendhi**
+<div align="center">
 
-GitHub: https://github.com/sakinasendhi52
+**Sakina Mufaddal Sendhi**
 
----
+[![GitHub](https://img.shields.io/badge/GitHub-sakinasendhi52-181717?style=for-the-badge\&logo=github)](https://github.com/sakinasendhi52)
 
-## ⭐ Thank You
+⭐ Thank you for visiting this repository!
 
-Thank you for visiting this repository!
-
-If you found this project useful, feel free to ⭐ the repository.
+</div>
