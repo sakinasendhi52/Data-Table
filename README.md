@@ -120,7 +120,7 @@ The form uses React state variables to control every input field.
 
 ---
 
-## 🛠️ Technologies Used
+## 🔧 Technologies Used
 
 * Next.js
 * React
