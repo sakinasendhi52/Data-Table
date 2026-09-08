@@ -386,11 +386,15 @@ UserData
 
 ### User Registration Form
 
-<img src="assets/form.png" width="800" alt="User Management Form">
+<img src="output/form.jpeg" width="800" alt="User Form">
 
-### Users Data Table
+### Users Data Table when no data is present
 
-<img src="assets/users-table.png" width="800" alt="Users Data Table">
+<img src="output/no-data-table.png" width="800" alt="Users Data Table with no data">
+
+### Users Data Table when data is present
+
+<img src=output/data-table.png" width="800" alt="Users Data Table with data">
 
 ---
 
