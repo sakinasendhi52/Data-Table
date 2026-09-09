@@ -403,8 +403,8 @@ UserData
 |                        |                                             |
 | ---------------------- | ------------------------------------------- |
 | 🔗 Live Demo           | **[User Management Website](https://user-management-system-website.netlify.app/)**     |
-| 🎥 Project Walkthrough | **Add your project explanation video here** |
-| 🎥 Project Recording   | **Add your project demo video here**        |
+| 🎥 Project Walkthrough | **[Project Explanation](https://drive.google.com/file/d/1kORLoZ6Dk5Enxx5fMlRECVUHVFy-I-fW/view?usp=sharing)** |
+| 🎥 Project Recording   | **[Project Demo](https://drive.google.com/file/d/10uOOJbKGGNuQQJiLFrW3bjweT7rOXhx3/view?usp=sharing)**        |
 
 ---
 
