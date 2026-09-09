@@ -17,7 +17,6 @@
 * [Installation](#-installation)
 * [React & Next.js Concepts Covered](#-react--nextjs-concepts-covered)
 * [How It Works](#-how-it-works)
-* [User Data Structure](#-user-data-structure)
 * [Screenshot](#-screenshot)
 * [Demo](#-demo)
 * [Author](#-author)
@@ -354,9 +353,7 @@ The JSON data is then converted back into a JavaScript array using:
 JSON.parse(savedUserData);
 ```
 
----
-
-## 🗂️ User Data Structure
+### 🗂️ User Data Structure
 
 Each user record contains:
 
